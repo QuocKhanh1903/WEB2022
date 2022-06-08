@@ -10,9 +10,26 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
 <body>
+    <div class="flex justify-end">
+        <button id="button" class="md:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="44"
+            height="44"
+            fill="currentColor"
+            class="bi bi-justify"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </button>
+      </div>
     <div class="mx-auto max-w-3xl bg-white justify-items-end ">
         <div class="flex justify-end py-4 px-8">
-            <ul class="text-black text-xl font-bold">
+            <ul class="text-black text-xl font-bold hidden md:flex md:space-x-4" id="menu">
                 <li class="inline-block mx-4"><a href="http://127.0.0.1:5500/asignment/contact.html">Works</a></li>
                 <li class="inline-block  mx-4"><a href="http://127.0.0.1:5500/asignment/blog.html">Blog</a></li>
                 <li class="inline-block  mx-4 "><a href="http://127.0.0.1:5500/asignment/contact.html">Contact</a></li>
@@ -25,7 +42,7 @@
                     <p class="w-96 text-justify pb-4 ">Hello everyone, I'm Khanh, I'm 19 years old,
                         I'm currently studying at FPT Polytechnic College, my major is Web Design.</p>
                     <button type="submit"
-                        class="border bg-red-400 text-white text-xl md:inline rounded-md px-8 py-3 md:ml-auto mx-auto block">Download
+                        class="border bg-red-400 text-white text-xl md:inline rounded-md px-8 py-3 md:ml-auto mx-auto block ">Download
                         Resume</button>
                 </div>
                 <div class="mx-4 py-8 cols-3 order-1 md:col-span-1 md:order-2">
@@ -123,6 +140,14 @@
             </p>
         </div>
     </div>
+    <script>
+        const menu = document.getElementById("menu");
+        const button = document.getElementById("button");
+  
+        button.addEventListener("click", function () {
+          menu.classList.toggle("hidden");
+        });
+      </script>
 </body>
 
 </html>
